@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0px 0px;
+  margin: 0px 0px;
+  font-family: "Press Start 2P", sans-serif;
+  background-color: rgba(108, 21, 135, 0.567);
+}
+
+.title {
+  transform: translateY(-20%);
+  margin: 0 auto;
+  color: white;
+  padding-top: 15px;
+  text-shadow: 3px 6px 6px black;
+  white-space: no-wrap;
+  font-size: 2rem;
+}
+.container {
+  transform: translateY(40%);
+  margin: 0 auto;
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+}
+
+.board {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: white;
+  box-shadow: 1px -1px 20px black;
+}
+.squares {
+  min-height: 140px;
+  border: 2px solid rgba(108, 21, 135, 0.567);
+  background-color: rgba(120, 227, 161, 0.821);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-size: 70px;
+  text-align: center;
+  user-select: none;
+}
+
+.squares:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.squares:active {
+  transform: scale(0.83);
+  cursor: pointer;
+  transition: 0.5s;
+}
+span {
+  text-align: center;
+}
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(120, 227, 161, 0.821);
+  margin: auto;
+  min-height: 500px;
+  transform: translate(0%, -55%);
+  text-align: center;
+  font-size: 100%;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.567);
+  animation: modal-animation 1.5s ease;
+  display: none;
+  overflow: hidden;
+  position: absolute;
+}
+.modal2 {
+  animation: modal2 1s ease-in;
+}
+.title2 {
+  background-color: rgba(120, 227, 161, 0);
+}
+.text {
+  background-color: rgba(137, 43, 226, 0);
+}
+.playagain {
+  border-radius: 5%;
+  background-color: rgb(118, 22, 209);
+  color: white;
+  padding: 15px 25px;
+  box-shadow: 1px 1px 5px black;
+}
+.playagain:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+  transition: 0.5s;
+}
+@keyframes modal-animation {
+  from {
+    transform: translateY(-400%);
+  }
+  to {
+    transform: translateY(-55%);
+  }
+}
+@keyframes modal2 {
+  from {
+    transform: scale(1) translateY(-55%);
+  }
+  to {
+    transform: scale(0) translateY(-60%);
+  }
+}
